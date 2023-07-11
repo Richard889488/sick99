@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>九九乘法练习</title>
+    <title>九九乘法表練習</title>
+    <style>
+        img {
+            width: 200px;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-    <h1>九九乘法练习</h1>
+    <h1>九九乘法表練習</h1>
+    <h2>可愛病雞</h2>
     <button onclick="generateRandomInt()">出题</button>
     <div id="textContainer"></div>
     
@@ -12,6 +22,7 @@
     <input type="number" id="input" name="input">
     <button onclick="checkInput()">回答</button>
     <div id="result"></div>
+    <img src="sicl.png" alt="可愛病機背九九乘法表">
 
     <script>
         var one = 0;
@@ -32,9 +43,9 @@
             var userInput = parseInt(document.getElementById("input").value);
 
             if (userInput === ans) {
-                document.getElementById("result").innerHTML = "回答正确！";
+                document.getElementById("result").innerHTML = "正確!!";
             } else {
-                document.getElementById("result").innerHTML = "回答错误！";
+                document.getElementById("result").innerHTML = "錯誤再加油";
             }
         }
     </script>
