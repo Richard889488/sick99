@@ -23,11 +23,13 @@
     <button onclick="checkInput()">回答</button>
     <div id="result"></div>
     <img src="sicl.png" alt="可愛病機背九九乘法表">
+    <audio id="myAudio" src="audio_file.mp3"></audio>
 
     <script>
         var one = 0;
         var two = 0;
         var ans = 0;
+	var audio = document.getElementById("myAudio");
 
         function generateRandomInt() {
             one = Math.floor(Math.random() * 9) + 1;
@@ -44,6 +46,7 @@
 
             if (userInput === ans) {
                 document.getElementById("result").innerHTML = "正確!!";
+		audio.play();
             } else {
                 document.getElementById("result").innerHTML = "錯誤再加油";
             }
